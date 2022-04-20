@@ -16,9 +16,11 @@
     line-height: math.div(25, 18);
 
     &_bold {
-        font-weight: 700;
-        font-size: rem(20);
-        line-height: math.div(27, 20);
+        @media (min-width: $tablet) {
+            font-weight: 700;
+            font-size: rem(20);
+            line-height: math.div(27, 20);
+        }
     }
 
     transition: background-color 0.3s ease 0s;

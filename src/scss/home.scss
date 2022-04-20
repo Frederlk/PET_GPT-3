@@ -1,3 +1,176 @@
-//====================================================================================================
+.start {
+    &__container {
+    }
 
-//====================================================================================================
+    &__wrapper {
+        min-height: 100vh;
+        padding-top: rem(100);
+        @media (min-width: $mobile) {
+            align-items: center;
+            justify-content: space-between;
+            display: flex;
+        }
+        @media (max-width: $mobileSmall) {
+            padding-top: rem(80);
+        }
+    }
+
+    &__content {
+        @media (min-width: $tablet) {
+            padding-top: rem(40);
+        }
+    }
+
+    &__title {
+        font-weight: 800;
+        @include adaptiveValue("font-size", 62, 30, 1200, 767.98, 1);
+        line-height: math.div(75, 62);
+        letter-spacing: -0.04em;
+        background: linear-gradient(89.97deg, #ae67fa 1.84%, #f49867 102.67%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        @media (min-width: $mobile) {
+            &:not(:last-child) {
+                @include adaptiveValue("margin-bottom", 35, 25);
+            }
+        }
+        @media (max-width: $mobileSmall) {
+            &:not(:last-child) {
+                margin-bottom: rem(10);
+            }
+        }
+    }
+
+    &__text {
+        @media (min-width: $mobile) {
+            @include adaptiveValue("max-width", 555, 360);
+        }
+        font-weight: 400;
+        font-size: rem(20);
+        line-height: math.div(27, 20);
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 35, 25);
+        }
+    }
+
+    &__form {
+        position: relative;
+        display: flex;
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 35, 25);
+        }
+        @media (max-width: $mobileSmall) {
+            flex-wrap: wrap;
+        }
+        .form__error {
+            position: absolute;
+            bottom: 100%;
+            left: 0;
+            color: red;
+            font-size: rem(14);
+            line-height: math.div(16, 14);
+            margin-bottom: rem(4);
+        }
+    }
+
+    &__input {
+        @include adaptiveValue("min-height", 73, 58, 1200, 767.98, 1);
+        @media (min-width: $mobileSmall) {
+            flex: 1 1 auto;
+            border-radius: rem(5) 0px 0px rem(5);
+        }
+        @media (max-width: $mobileSmall) {
+            flex: 1 1 100%;
+            &:not(:last-child) {
+                @include adaptiveValue("margin-bottom", 20, 10);
+            }
+        }
+    }
+
+    &__button {
+        @include adaptiveValue("min-height", 73, 58, 1200, 767.98, 1);
+        flex: 0 0 rem(174);
+        @media (min-width: $mobileSmall) {
+            border-radius: 0 rem(5) rem(5) 0;
+        }
+        @media (max-width: $tablet) {
+            flex: 0 0 rem(140);
+        }
+        @media (max-width: $mobileSmall) {
+            flex: 1 1 100%;
+        }
+    }
+
+    &__people {
+    }
+
+    &__image {
+        flex: 0 0 percent(667, 1170);
+        margin: rem(-60) rem(-110) 0px rem(-20);
+        img {
+            max-width: 100%;
+        }
+        @media (max-width: $tablet) {
+            margin-left: 0;
+        }
+        @media (max-height: em(830)) {
+            margin-top: rem(0);
+        }
+        @media (max-height: em(830)) and (max-width: $tablet) {
+            margin-top: rem(-60);
+        }
+        @media (max-width: $mobile) {
+            max-width: 50%;
+            margin: 0px auto;
+        }
+        @media (max-width: $mobileSmall) {
+            max-width: 80%;
+        }
+    }
+}
+
+.people-start {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: rem(15);
+    @media (max-width: $mobile) {
+        justify-content: center;
+    }
+    &__item {
+        flex: 0 0 rem(36);
+        min-height: rem(36);
+        border-radius: 50%;
+        overflow: hidden;
+        border: rem(2) solid $white;
+        &:not(:first-child) {
+            margin-left: rem(-9);
+        }
+    }
+
+    &__item-last {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-weight: 800;
+        font-size: rem(8);
+        background: #13ded2;
+        color: $black;
+        margin-right: rem(15);
+    }
+
+    &__text {
+        font-size: rem(12);
+        line-height: math.div(18, 12);
+        color: $white;
+        @media (max-width: $mobileSmall) {
+            text-align: center;
+        }
+    }
+}
+
+//========================================================================================================================================================

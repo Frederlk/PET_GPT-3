@@ -4,7 +4,58 @@
     <body>
         <div class="wrapper">
             @@include('html/_header.htm',{})
-            <main class="page"></main>
+            <main class="page">
+                <section class="page__start start">
+                    <div class="start__container">
+                        <div class="start__wrapper">
+                            <div class="start__content">
+                                <h1 class="start__title">Let’s Build Something amazing with GPT-3 OpenAI</h1>
+                                <p class="start__text">
+                                    Yet bed any for travelling assistance indulgence unpleasing. Not thoughts all exercise
+                                    blessing. Indulgence way everything joy alteration boisterous the attachment. Party we years
+                                    to order allow asked of.
+                                </p>
+                                <form action="#" class="start__form">
+                                    <input
+                                        data-required="email"
+                                        type="text"
+                                        name="email"
+                                        data-error="Invalid Email"
+                                        placeholder="Your Email Address"
+                                        class="start__input input"
+                                    />
+                                    <button type="submit" class="start__button button button_bold">Get Started</button>
+                                </form>
+                                <div class="start__people people-start">
+                                    <span class="people-start__item people-start__item-ibg">
+                                        <img src="@img/avatars/1.jpg" alt="avatar" />
+                                    </span>
+                                    <span class="people-start__item people-start__item-ibg">
+                                        <img src="@img/avatars/2.jpg" alt="avatar" />
+                                    </span>
+                                    <span class="people-start__item people-start__item-ibg">
+                                        <img src="@img/avatars/3.jpg" alt="avatar" />
+                                    </span>
+                                    <span class="people-start__item people-start__item-ibg">
+                                        <img src="@img/avatars/4.jpg" alt="avatar" />
+                                    </span>
+                                    <span class="people-start__item people-start__item-ibg">
+                                        <img src="@img/avatars/5.jpg" alt="avatar" />
+                                    </span>
+                                    <span class="people-start__item people-start__item-ibg">
+                                        <img src="@img/avatars/6.jpg" alt="avatar" />
+                                    </span>
+                                    <span class="people-start__item people-start__item-last">1.6k+</span>
+                                    <div class="people-start__text">1,600 people requested access a visit in last 24 hours</div>
+                                </div>
+                            </div>
+                            <div data-da=".start__content, 767.98, 1" class="start__image">
+                                <img src="@img/main.png" alt="AI Head" />
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
             @@include('html/_footer.htm',{})
         </div>
         @@include('html/_popup.htm',{}) @@include('html/_js.htm',{})
