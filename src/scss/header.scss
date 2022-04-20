@@ -53,6 +53,13 @@
         padding-bottom: rem(5);
         @include adaptiveValue("min-height", 160, 90, 1200, 991.98, 1);
         @include adaptiveValue("gap", 70, 30, 1200, 767.98, 1);
+        transition: all 0.3s ease 0s;
+        ._header-scroll & {
+            min-height: rem(70);
+            @media (max-width: $mobileSmall) {
+                min-height: rem(50);
+            }
+        }
         @media (max-width: $mobile) {
             min-height: rem(70);
         }
@@ -68,6 +75,10 @@
     }
 
     &__menu {
+        @media (min-width: $mobile) {
+            position: relative;
+            z-index: 2;
+        }
         flex: 1 1 auto;
     }
 

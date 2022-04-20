@@ -1,5 +1,28 @@
 .start {
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        width: percent(1010, 1440);
+        height: percent(1010, 1440);
+        left: percent(-336, 1440);
+        top: percent(-305, 1440);
+        background: #002853;
+        filter: blur(564px);
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        width: percent(701, 1440);
+        height: percent(496, 1440);
+        left: percent(1127, 1440);
+        bottom: percent(-180, 1440);
+        background: #072d56;
+        filter: blur(564px);
+    }
     &__container {
+        position: relative;
+        z-index: 2;
     }
 
     &__wrapper {
@@ -174,3 +197,22 @@
 }
 
 //========================================================================================================================================================
+
+.companies {
+    @include adaptiveValue("padding-top", 70, 50, 1200, 767.98, 1);
+    @include adaptiveValue("padding-bottom", 65, 30, 1200, 767.98, 1);
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        @include adaptiveValue("gap", 46, 20, 1200, 767.98, 1);
+    }
+
+    &__item {
+        text-align: center;
+        img {
+            max-width: 100%;
+        }
+    }
+}
