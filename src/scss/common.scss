@@ -117,13 +117,6 @@
 
 .feature {
     &__title {
-        font-weight: 800;
-        @include adaptiveValue("font-size", 34, 24);
-        line-height: math.div(45, 34);
-        background: linear-gradient(103.22deg, #ae67fa -13.86%, #f49867 99.55%), $white;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
     }
 
     &__link {
@@ -136,4 +129,16 @@
             }
         }
     }
+}
+
+//========================================================================================================================================================
+
+.title {
+    font-weight: 800;
+    @include adaptiveValue("font-size", 34, 24);
+    line-height: math.div(45, 34);
+    background: linear-gradient(103.22deg, #ae67fa -13.86%, #f49867 99.55%), $white;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }

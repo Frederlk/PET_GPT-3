@@ -298,6 +298,7 @@
 
 .future {
     @include adaptiveValue("padding-top", 100, 40, 1200, 767.98, 1);
+    @include adaptiveValue("padding-bottom", 50, 40, 1200, 767.98, 1);
     position: relative;
     &::before {
         content: "";
@@ -324,7 +325,7 @@
     }
 
     &__feature {
-        @media (min-width: $mobile) {
+        @media (min-width: $tablet) {
             flex: 0 0 percent(426, 1200);
         }
         .feature__title {
@@ -335,11 +336,92 @@
     }
 
     &__items {
-        @media (min-width: $mobile) {
+        @media (min-width: $tablet) {
             flex: 0 1 rem(600);
         }
     }
 
     &__item {
+    }
+}
+
+//========================================================================================================================================================
+
+.posibilities {
+    @include adaptiveValue("padding-top", 10, 30, 767.98, 320, 1);
+    @include adaptiveValue("padding-bottom", 80, 40, 1200, 767.98, 1);
+    &__container {
+    }
+
+    &__wrapper {
+        @media (min-width: $mobile) {
+            align-items: flex-end;
+            display: flex;
+        }
+        @media (min-width: $pc) {
+            padding: 0px rem(40);
+        }
+    }
+
+    &__image {
+        @media (min-width: $mobile) {
+            flex: 0 1 50%;
+        }
+        @media (max-width: $mobile) {
+            @include adaptiveValue("max-width", 500, 290, 767.98, 320, 1);
+            margin-bottom: rem(30);
+        }
+        img {
+            max-width: 100%;
+        }
+    }
+
+    &__content {
+        padding: rem(30) rem(20);
+        @media (min-width: $mobile) {
+            flex: 0 1 50%;
+        }
+        @media (max-width: $tablet) {
+            padding: 0px 0px 0px rem(20);
+        }
+        @media (max-width: $mobile) {
+            padding: 0;
+        }
+    }
+
+    &__link {
+        display: inline-flex;
+        line-height: math.div(30, 16);
+        transition: all 0.3s ease 0s;
+        color: $primary-2;
+        @media (any-hover: hover) {
+            &:hover {
+                color: $primary-1;
+            }
+        }
+        &:not(:last-child) {
+            margin-bottom: rem(10);
+        }
+        &_blue {
+            color: #71e5ff;
+            @media (any-hover: hover) {
+                &:hover {
+                    color: $white;
+                }
+            }
+        }
+    }
+
+    &__title {
+        &:not(:last-child) {
+            margin-bottom: rem(20);
+        }
+    }
+
+    &__text {
+        line-height: math.div(30, 16);
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 30, 20);
+        }
     }
 }
