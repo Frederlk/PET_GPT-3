@@ -511,7 +511,7 @@
 
 .blog {
     @include adaptiveValue("padding-top", 80, 40, 1200, 767.98, 1);
-    @include adaptiveValue("padding-bottom", 80, 40, 1200, 767.98, 1);
+    @include adaptiveValue("padding-bottom", 160, 80, 1200, 767.98, 1);
     &__container {
     }
 
@@ -679,3 +679,53 @@
 }
 
 //========================================================================================================================================================
+
+.request {
+    @include adaptiveValue("padding-top", 175, 60, 1200, 767.98, 1);
+    @include adaptiveValue("padding-bottom", 100, 40, 1200, 767.98, 1);
+    background-color: $secondary-2;
+    &__container {
+        text-align: center;
+    }
+
+    &__title {
+        font-weight: 800;
+        @include adaptiveValue("font-size", 62, 30, 1200, 767.98, 1);
+        line-height: math.div(75, 62);
+        letter-spacing: -0.04em;
+        background: linear-gradient(89.97deg, #ae67fa 1.84%, #f49867 102.67%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 64, 30, 1200, 479.98, 1);
+        }
+        @media (min-width: $mobile) {
+            margin: 0px auto;
+            max-width: rem(820);
+        }
+    }
+
+    &__button {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-family: Gilroy;
+        font-weight: 500;
+        font-size: rem(18);
+        line-height: math.div(21, 18);
+        border: rem(1) solid $white;
+        color: $white;
+        min-height: rem(65);
+        min-width: rem(220);
+        padding: rem(5) rem(10);
+        transition: all 0.3s ease 0s;
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: $primary-1;
+                border: rem(1) solid transparent;
+            }
+        }
+    }
+}
