@@ -1,1 +1,68 @@
-// Заголовки, общие БЄМ блоки и проче...
+.item {
+    &_top {
+        @media (min-width: $mobile) {
+            display: flex;
+            justify-content: space-between;
+            gap: rem(30);
+        }
+
+        .item__text {
+            @media (min-width: $mobile) {
+                flex: 0 1 rem(750);
+                margin-top: rem(15);
+            }
+        }
+    }
+
+    &__header {
+        flex: 1 0 auto;
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 50, 15, 1200, 479.98, 1);
+        }
+    }
+
+    &__line {
+        display: inline-flex;
+        width: rem(40);
+        height: rem(3);
+        background: linear-gradient(103.22deg, #ae67fa -13.86%, #f49867 99.55%), $white;
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 20, 10, 1200, 767.98, 1);
+        }
+    }
+
+    &__title {
+        font-weight: 800;
+        @include adaptiveValue("font-size", 24, 20, 1200, 767.98, 1);
+        line-height: math.div(28, 24);
+        letter-spacing: -0.04em;
+        color: $white;
+    }
+
+    &__text {
+        line-height: math.div(30, 16);
+    }
+}
+
+.feature {
+    &__title {
+        font-weight: 800;
+        @include adaptiveValue("font-size", 34, 24);
+        line-height: math.div(45, 34);
+        background: linear-gradient(103.22deg, #ae67fa -13.86%, #f49867 99.55%), $white;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    &__link {
+        line-height: math.div(30, 16);
+        color: $primary-2;
+        transition: all 0.3s ease 0s;
+        @media (any-hover: hover) {
+            &:hover {
+                color: $primary-1;
+            }
+        }
+    }
+}

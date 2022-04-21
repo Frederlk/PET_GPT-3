@@ -9,21 +9,28 @@
         content: "";
         position: fixed;
         width: 100%;
-        height: rem(80);
+        @include adaptiveValue("height", 160, 90, 1200, 991.98, 1);
         top: 0;
         right: 0;
         background-color: $secondary-2;
         transition: all 0.5s ease 0s;
         opacity: 0;
         visibility: hidden;
+        @media (max-width: $tablet) {
+            height: rem(80);
+        }
         @media (max-width: $mobileSmall) {
             height: rem(60);
         }
     }
     &._header-scroll {
         &::after {
+            height: rem(80);
             opacity: 1;
             visibility: visible;
+            @media (max-width: $mobileSmall) {
+                height: rem(60);
+            }
         }
     }
 

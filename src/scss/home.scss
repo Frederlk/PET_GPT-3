@@ -8,7 +8,7 @@
         left: percent(-336, 1440);
         top: percent(-305, 1440);
         background: #002853;
-        filter: blur(564px);
+        filter: blur(rem(564));
     }
     &::after {
         content: "";
@@ -18,7 +18,7 @@
         left: percent(1127, 1440);
         bottom: percent(-180, 1440);
         background: #072d56;
-        filter: blur(564px);
+        filter: blur(rem(564));
     }
     &__container {
         position: relative;
@@ -200,7 +200,7 @@
 
 .companies {
     @include adaptiveValue("padding-top", 70, 50, 1200, 767.98, 1);
-    @include adaptiveValue("padding-bottom", 65, 30, 1200, 767.98, 1);
+    @include adaptiveValue("padding-bottom", 65, 35, 1200, 767.98, 1);
     &__container {
         display: flex;
         align-items: center;
@@ -216,3 +216,76 @@
         }
     }
 }
+
+//========================================================================================================================================================
+
+.what {
+    @include adaptiveValue("padding-top", 65, 35, 1200, 767.98, 1);
+    @include adaptiveValue("padding-bottom", 100, 50, 1200, 767.98, 1);
+    &__container {
+    }
+
+    &__content {
+        overflow: hidden;
+        position: relative;
+        @include adaptiveValue("padding", 40, 30, 991.98, 767.98, 1);
+        background-color: $secondary-1;
+        @media (max-width: $mobileSmall) {
+            padding: rem(30) rem(15);
+            margin: 0px rem(-15);
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            width: percent(600, 1200);
+            height: percent(780, 1200);
+            left: percent(-400, 1200);
+            top: percent(-600, 1200);
+            background: #0f4279;
+            filter: blur(rem(120));
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            width: percent(623, 1200);
+            height: percent(1000, 1200);
+            right: percent(-400, 1200);
+            bottom: percent(-600, 1200);
+            background: #1b78de;
+            filter: blur(rem(200));
+        }
+    }
+
+    &__item {
+        position: relative;
+        z-index: 2;
+    }
+
+    &__feature {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .feature__title {
+            flex: 0 1 rem(484);
+        }
+        .feature__link {
+            margin-top: rem(15);
+        }
+        &:not(:first-child) {
+            @include adaptiveValue("margin-top", 90, 50, 1200, 767.98, 1);
+        }
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 90, 50, 1200, 767.98, 1);
+        }
+    }
+
+    &__body {
+        display: grid;
+        gap: rem(30);
+        grid-template-columns: repeat(auto-fit, minmax(rem(250), 1fr));
+    }
+}
+
+//========================================================================================================================================================
