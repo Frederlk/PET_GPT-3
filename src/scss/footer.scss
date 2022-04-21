@@ -1,3 +1,128 @@
-//====================================================================================================
+.footer {
+    @include adaptiveValue("padding-top", 100, 40, 1200, 767.98, 1);
+    padding-bottom: rem(30);
+    font-family: Gilroy;
+    background-color: $secondary-2;
+    &__container {
+    }
 
-//====================================================================================================
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        gap: rem(35);
+        @media (max-width: em(600)) {
+            flex-wrap: wrap;
+        }
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 80, 40, 1200, 767.98, 1);
+        }
+    }
+
+    &__info {
+        flex: 0 1 rem(170);
+        @media (max-width: em(600)) {
+            flex: 1 1 100%;
+        }
+    }
+
+    &__logo {
+        display: inline-flex;
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 25, 15, 1200, 767.98, 1);
+        }
+        img {
+            @include adaptiveValue("width", 120, 90, 1200, 767.98, 1);
+        }
+    }
+
+    &__address {
+    }
+
+    &__item {
+        flex: 0 1 rem(120);
+        @media (max-width: em(600)) {
+            flex: 1 1 100%;
+        }
+    }
+
+    &__label {
+        font-weight: 700;
+        font-size: rem(14);
+        line-height: math.div(16, 14);
+        color: $white;
+        transition: all 0.5s ease 0s;
+        @media (min-width: em(600)) {
+            &:not(:last-child) {
+                @include adaptiveValue("margin-bottom", 35, 20, 1200, 767.98, 1);
+            }
+        }
+        @media (max-width: em(600)) {
+            font-size: rem(18);
+            padding-right: rem(30);
+            position: relative;
+            &::before {
+                content: "";
+                position: absolute;
+                width: rem(18);
+                height: rem(2);
+                top: rem(9);
+                right: rem(0);
+                background: linear-gradient(103.22deg, #ae67fa -13.86%, #f49867 99.55%), $white;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                width: rem(2);
+                height: rem(18);
+                top: rem(1);
+                right: rem(8);
+                background: linear-gradient(103.22deg, #ae67fa -13.86%, #f49867 99.55%), $white;
+                transition: all 0.5s ease 0s;
+                visibility: visible;
+                opacity: 1;
+            }
+            &._spoller-active {
+                color: $primary-2;
+                &::after {
+                    transform: rotate(90deg);
+                    visibility: hidden;
+                    opacity: 0;
+                }
+            }
+        }
+    }
+
+    &__list {
+        @media (max-width: em(600)) {
+            padding-top: rem(20);
+        }
+    }
+
+    &__list-item {
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 35, 20, 1200, 767.98, 1);
+        }
+    }
+
+    &__link-item {
+        transition: all 0.3s ease 0s;
+        @media (any-hover: hover) {
+            &:hover {
+                color: $mainColor;
+            }
+        }
+    }
+
+    &__copy {
+        text-align: center;
+    }
+}
+.footer-text {
+    font-weight: 500;
+    font-size: rem(12);
+    line-height: math.div(14, 12);
+    color: $white;
+    @media (max-width: em(600)) {
+        font-size: rem(16);
+    }
+}
