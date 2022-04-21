@@ -13,6 +13,77 @@
             }
         }
     }
+    &_future {
+        &:not(:last-child) {
+            @include adaptiveValue("padding-bottom", 35, 25, 1200, 479.98, 1);
+        }
+        @media (min-width: $mobileSmall) {
+            display: flex;
+            @include adaptiveValue("gap", 70, 20, 1200, 767.98, 1);
+        }
+        .item__header {
+            flex: 0 0 rem(185);
+            @media (max-width: $mobile) {
+                flex: 0 0 25%;
+            }
+            @media (max-width: $mobileSmall) {
+                flex: 1 1 100%;
+                position: relative;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: rem(20);
+                    height: rem(2);
+                    top: rem(25);
+                    right: rem(0);
+                    background: linear-gradient(103.22deg, #ae67fa -13.86%, #f49867 99.55%), $white;
+                }
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: rem(2);
+                    height: rem(20);
+                    top: rem(16);
+                    right: rem(9);
+                    background: linear-gradient(103.22deg, #ae67fa -13.86%, #f49867 99.55%), $white;
+                    transition: all 0.5s ease 0s;
+                    visibility: visible;
+                    opacity: 1;
+                }
+                &._spoller-active {
+                    &::after {
+                        transform: rotate(90deg);
+                        visibility: hidden;
+                        opacity: 0;
+                    }
+                }
+            }
+
+            &:not(:last-child) {
+                margin-bottom: rem(0);
+            }
+        }
+        .item__line {
+            &:not(:last-child) {
+                margin-bottom: rem(4);
+            }
+        }
+        .item__title {
+            font-size: rem(18);
+            @media (max-width: $mobileSmall) {
+                padding-right: rem(30);
+            }
+        }
+        .item__text {
+            font-size: rem(14);
+            @media (min-width: $mobile) {
+                flex: 0 1 rem(750);
+            }
+            @media (max-width: $mobileSmall) {
+                padding-top: rem(20);
+            }
+        }
+    }
 
     &__header {
         flex: 1 0 auto;

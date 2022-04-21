@@ -9,6 +9,9 @@
         top: percent(-305, 1440);
         background: #002853;
         filter: blur(rem(564));
+        @media (max-width: $mobile) {
+            filter: blur(rem(250));
+        }
     }
     &::after {
         content: "";
@@ -19,6 +22,9 @@
         bottom: percent(-180, 1440);
         background: #072d56;
         filter: blur(rem(564));
+        @media (max-width: $mobile) {
+            filter: blur(rem(200));
+        }
     }
     &__container {
         position: relative;
@@ -199,7 +205,7 @@
 //========================================================================================================================================================
 
 .companies {
-    @include adaptiveValue("padding-top", 70, 50, 1200, 767.98, 1);
+    padding-top: rem(70);
     @include adaptiveValue("padding-bottom", 65, 35, 1200, 767.98, 1);
     &__container {
         display: flex;
@@ -221,7 +227,7 @@
 
 .what {
     @include adaptiveValue("padding-top", 65, 35, 1200, 767.98, 1);
-    @include adaptiveValue("padding-bottom", 100, 50, 1200, 767.98, 1);
+    @include adaptiveValue("padding-bottom", 100, 40, 1200, 767.98, 1);
     &__container {
     }
 
@@ -289,3 +295,51 @@
 }
 
 //========================================================================================================================================================
+
+.future {
+    @include adaptiveValue("padding-top", 100, 40, 1200, 767.98, 1);
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        @include adaptiveValue("width", 777, 350);
+        @include adaptiveValue("height", 777, 350);
+        @include adaptiveValue("left", -444, -100);
+        @include adaptiveValue("top", -128, -20);
+        background: #07325f;
+        filter: blur(rem(564));
+        @media (max-width: $mobile) {
+            filter: blur(rem(250));
+        }
+    }
+    &__container {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        justify-content: space-between;
+        @include adaptiveValue("gap", 70, 40, 1200, 767.98, 1);
+        @media (max-width: $tablet) {
+            flex-direction: column;
+        }
+    }
+
+    &__feature {
+        @media (min-width: $mobile) {
+            flex: 0 0 percent(426, 1200);
+        }
+        .feature__title {
+            &:not(:last-child) {
+                @include adaptiveValue("margin-bottom", 34, 20, 1200, 767.98, 1);
+            }
+        }
+    }
+
+    &__items {
+        @media (min-width: $mobile) {
+            flex: 0 1 rem(600);
+        }
+    }
+
+    &__item {
+    }
+}
