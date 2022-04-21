@@ -506,3 +506,176 @@
         }
     }
 }
+
+//========================================================================================================================================================
+
+.blog {
+    @include adaptiveValue("padding-top", 80, 40, 1200, 767.98, 1);
+    @include adaptiveValue("padding-bottom", 80, 40, 1200, 767.98, 1);
+    &__container {
+    }
+
+    &__title {
+        font-weight: 800;
+        @include adaptiveValue("font-size", 62, 30, 1200, 767.98, 1);
+        line-height: math.div(75, 62);
+        letter-spacing: -0.04em;
+        background: linear-gradient(89.97deg, #ae67fa 1.84%, #f49867 102.67%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 115, 30, 1200, 479.98, 1);
+        }
+        @media (min-width: $mobile) {
+            max-width: rem(700);
+        }
+    }
+
+    &__body {
+        @media (min-width: $tablet) {
+            grid-template-columns: 1.2fr 0.9fr 0.9fr;
+            grid-template-areas:
+                "grid1 grid2 grid3"
+                "grid1 grid4 grid5";
+        }
+        @media (max-width: $tablet) {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas:
+                "grid1 grid1"
+                "grid2 grid3"
+                "grid4 grid5";
+        }
+        @media (min-width: $mobileSmall) {
+            @include adaptiveValue("gap", 45, 30, 1200, 991.98, 1);
+            display: grid;
+        }
+    }
+
+    &__item {
+    }
+}
+.item-blog {
+    background-color: $secondary-1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-top-left-radius: rem(40);
+    @media (max-width: $mobileSmall) {
+        &:not(:last-child) {
+            margin-bottom: rem(30);
+        }
+    }
+    &_1 {
+        @media (max-width: $tablet) {
+            flex-direction: row;
+        }
+        @media (max-width: $mobileSmall) {
+            flex-direction: column;
+        }
+        .item-blog__image-ibg {
+            height: rem(290);
+            @media (max-width: $tablet) {
+                flex: 0 0 calc(50% - rem(15));
+            }
+            @media (max-width: $mobileSmall) {
+                flex: 0 0 rem(130);
+            }
+        }
+        .item-blog__body {
+            @media (max-width: $tablet) {
+                padding-left: rem(30);
+            }
+            @media (max-width: $mobileSmall) {
+                padding: rem(20);
+            }
+        }
+        .item-blog__link {
+            @include adaptiveValue("font-size", 25, 20, 1200, 767.98, 1);
+        }
+        grid-area: grid1;
+    }
+
+    &_2 {
+        grid-area: grid2;
+    }
+
+    &_3 {
+        grid-area: grid3;
+    }
+
+    &_4 {
+        grid-area: grid4;
+    }
+
+    &_5 {
+        grid-area: grid5;
+    }
+
+    &__image-ibg {
+        overflow: hidden;
+        height: rem(130);
+
+        img {
+            transition: all 0.3s ease 0s;
+            @media (any-hover: hover) {
+                &:hover {
+                    transform: scale(1.05);
+                }
+            }
+        }
+    }
+
+    &__body {
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+        padding: rem(25);
+        @media (max-width: $mobile) {
+            padding: rem(20);
+        }
+        h4 {
+            &:not(:last-child) {
+                @include adaptiveValue("margin-bottom", 40, 30);
+            }
+            flex: 1 1 auto;
+        }
+    }
+
+    &__date,
+    &__button {
+        font-weight: 700;
+        font-size: rem(12);
+        line-height: math.div(16, 12);
+        color: $white;
+        &:not(:last-child) {
+            margin-bottom: rem(10);
+        }
+    }
+
+    &__link {
+        @include adaptiveValue("font-size", 18, 16);
+        display: inline-flex;
+        font-weight: 800;
+        line-height: math.div(30, 25);
+        color: $white;
+        transition: all 0.3s ease 0s;
+        @media (any-hover: hover) {
+            &:hover {
+                color: $primary-2;
+            }
+        }
+    }
+
+    &__button {
+        display: inline-flex;
+        transition: all 0.3s ease 0s;
+        @media (any-hover: hover) {
+            &:hover {
+                color: $primary-2;
+            }
+        }
+    }
+}
+
+//========================================================================================================================================================
