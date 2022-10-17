@@ -13,7 +13,8 @@
         top: 0;
         right: 0;
         background-color: $secondary-2;
-        transition: all 0.5s ease 0s;
+        transition: height 0.5s ease 0s, opacity 0.5s ease 0s, visibility 0.5s ease 0s,
+            box-shadow 0.5s ease 0s, background-color 0.5s ease 0s;
         opacity: 0;
         visibility: hidden;
         @media (max-width: $tablet) {
@@ -28,6 +29,7 @@
             height: rem(80);
             opacity: 1;
             visibility: visible;
+            box-shadow: 0px rem(4) rem(4) rgba(0, 0, 0, 0.25);
             @media (max-width: $mobileSmall) {
                 height: rem(60);
             }
@@ -43,9 +45,10 @@
             top: 0;
             right: -100%;
             background-color: $secondary-2;
-            transition: all 0.5s ease 0s;
+            transition: right 0.5s ease 0s;
+            z-index: 2;
             .menu-open & {
-                right: 0;
+                right: rem(10);
             }
         }
         @media (max-width: $mobileSmall) {
@@ -60,7 +63,7 @@
         padding-bottom: rem(5);
         @include adaptiveValue("min-height", 160, 90, 1200, 991.98, 1);
         @include adaptiveValue("gap", 70, 30, 1200, 767.98, 1);
-        transition: all 0.3s ease 0s;
+        transition: min-height 0.3s ease 0s;
         ._header-scroll & {
             min-height: rem(70);
             @media (max-width: $mobileSmall) {
@@ -126,6 +129,8 @@
             display: flex;
             flex-direction: column;
             gap: rem(30);
+            @include scrollbars(rem(10), $primary-1, $secondary-2);
+
             .menu-open & {
                 right: rem(0);
                 opacity: 1;

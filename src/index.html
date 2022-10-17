@@ -1,137 +1,321 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>GPT-3</title>
-    </head>
+<html lang="en">
+    @@include('html/_head.htm',{ "title":"GPT-3 Home" })
     <body>
-        <div class="rootpage">
-            <h1>GPT-3</h1>
-            <div class="rootpage__info">Project Features</div>
-            <h2>Pages:</h2>
-            <ol class="rootpage__list">
-                <li><a target="_blank" href="home.html">Home Page</a></li>
-            </ol>
-            <div class="rootpage__contacts">
-                <h2>My contacts:</h2>
-                <p>Email: <a href="mailto:pertrinichshadow@gmail.com">pertrinichshadow@gmail.com</a></p>
-                <p>Phone: <a href="tel:375256474526">+375256474526</a></p>
-                <p>Social network: <a href="">Link to social network</a></p>
-            </div>
-        </div>
-    </body>
-    <style>
-        @charset "UTF-8";
-        @import url("https://fonts.googleapis.com/css?family=Montserrat:regular,700&display=swap");
-        *,
-        *::before,
-        *::after {
-            padding: 0px;
-            margin: 0px;
-            border: 0px;
-            box-sizing: border-box;
-        }
-        html,
-        body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-            min-width: 320px;
-            width: 100%;
-            color: #fff;
-            background-color: #5e5373;
-        }
-        body {
-            font-family: Montserrat;
-            font-size: 100%;
-            line-height: 1;
-            font-size: 1rem;
-        }
-        a {
-            text-decoration: underline;
-            color: #ebe691;
-        }
-        a:visited {
-            text-decoration: underline;
-            color: #aaa768;
-        }
-        a:hover {
-            text-decoration: none;
-        }
-        ul li {
-            list-style: none;
-        }
-        img {
-            vertical-align: top;
-        }
-        .wrapper {
-            width: 100%;
-            min-height: 100%;
-            overflow: hidden;
-        }
-        .rootpage {
-            padding: 30px;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-        }
-        @media (max-width: 767px) {
-            .rootpage {
-                padding: 30px 15px;
-            }
-        }
-        h1 {
-            color: #ebe691;
-            font-size: 2.5rem;
-            margin: 0px 0px 1.25rem 0px;
-        }
-        @media (max-width: 767px) {
-            h1 {
-                font-size: 1.85rem;
-                margin: 0px 0px 1.25rem 0px;
-            }
-        }
-        h2 {
-            color: #ebe691;
-            font-size: 1.25rem;
-            margin: 0px 0px 1rem 0px;
-        }
-        @media (max-width: 767px) {
-            h2 {
-                font-size: 1.125rem;
-                margin: 0px 0px 1rem 0px;
-            }
-        }
-        .rootpage__info {
-            line-height: 140%;
-            margin: 0px 0px 1.5rem 0px;
-        }
+        <div class="wrapper">
+            @@include('html/_header.htm',{})
+            <main class="page">
+                <section class="page__start start">
+                    <div class="start__container">
+                        <div class="start__wrapper" data-fullscreen="">
+                            <div class="start__content">
+                                <h1 class="start__title">Let’s Build Something amazing with GPT-3 OpenAI</h1>
+                                <p class="start__text">
+                                    Yet bed any for travelling assistance indulgence unpleasing. Not thoughts
+                                    all exercise blessing. Indulgence way everything joy alteration boisterous
+                                    the attachment. Party we years to order allow asked of.
+                                </p>
+                                <form action="#" class="start__form">
+                                    <input
+                                        data-required="email"
+                                        type="text"
+                                        name="email"
+                                        data-error="Invalid Email"
+                                        placeholder="Your Email Address"
+                                        class="start__input input"
+                                    />
+                                    <button type="submit" class="start__button button button_bold">
+                                        Get Started
+                                    </button>
+                                </form>
+                                <div class="start__people people-start">
+                                    <span class="people-start__item people-start__item-ibg">
+                                        <img src="@img/avatars/1.jpg" alt="avatar" />
+                                    </span>
+                                    <span class="people-start__item people-start__item-ibg">
+                                        <img src="@img/avatars/2.jpg" alt="avatar" />
+                                    </span>
+                                    <span class="people-start__item people-start__item-ibg">
+                                        <img src="@img/avatars/3.jpg" alt="avatar" />
+                                    </span>
+                                    <span class="people-start__item people-start__item-ibg">
+                                        <img src="@img/avatars/4.jpg" alt="avatar" />
+                                    </span>
+                                    <span class="people-start__item people-start__item-ibg">
+                                        <img src="@img/avatars/5.jpg" alt="avatar" />
+                                    </span>
+                                    <span class="people-start__item people-start__item-ibg">
+                                        <img src="@img/avatars/6.jpg" alt="avatar" />
+                                    </span>
+                                    <span class="people-start__item people-start__item-last">1.6k+</span>
+                                    <h4 class="people-start__text">
+                                        1,600 people requested access a visit in last 24 hours
+                                    </h4>
+                                </div>
+                            </div>
+                            <div data-da=".start__content, 767.98, 1" class="start__image">
+                                <img src="@img/main.png" alt="AI Head" />
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
-        .rootpage__list {
-            margin: 0px 0px 2.25rem 1.25rem;
-        }
-        .rootpage__list li:not(:last-child) {
-            margin: 0px 0px 15px 0px;
-        }
-        .rootpage__contacts,
-        .rootpage__tnx {
-            border-radius: 200px;
-            padding: 20px 65px;
-            line-height: 140%;
-        }
-        @media (max-width: 767px) {
-            .rootpage__contacts,
-            .rootpage__tnx {
-                border-radius: 40px;
-                padding: 20px;
-            }
-        }
-        .rootpage__contacts {
-            background: #32b5a4;
-        }
-        .rootpage__contacts a {
-            color: #ebe691;
-        }
-    </style>
+                <div class="page__companies companies">
+                    <div class="companies__container">
+                        <div class="companies__item">
+                            <img src="@img/companies/google.svg" alt="Google Logo" />
+                        </div>
+                        <div class="companies__item">
+                            <img src="@img/companies/slack.svg" alt="Slack Logo" />
+                        </div>
+                        <div class="companies__item">
+                            <img src="@img/companies/atlassian.svg" alt="Atlassian Logo" />
+                        </div>
+                        <div class="companies__item">
+                            <img src="@img/companies/dropbox.svg" alt="Dropbox Logo" />
+                        </div>
+                        <div class="companies__item">
+                            <img src="@img/companies/shopify.svg" alt="Shopify Logo" />
+                        </div>
+                    </div>
+                </div>
+
+                <section class="page__what what">
+                    <div class="what__container">
+                        <div class="what__content">
+                            <article class="what__item item item_top">
+                                <div class="item__header">
+                                    <span class="item__line"></span>
+                                    <h3 class="item__title">What is GPT-3</h3>
+                                </div>
+                                <p class="item__text">
+                                    We so opinion friends me message as delight. Whole front do of plate heard
+                                    oh ought. His defective nor convinced residence own. Connection has put
+                                    impossible own apartments boisterous. At jointure ladyship an insisted so
+                                    humanity he. Friendly bachelor entrance to on by.
+                                </p>
+                            </article>
+                            <div class="what__feature feature">
+                                <h2 class="feature__title title">
+                                    The possibilities are beyond your imagination
+                                </h2>
+                                <a href="#" class="feature__link">Explore The Library</a>
+                            </div>
+                            <div class="what__body">
+                                <article class="what__item item">
+                                    <div class="item__header">
+                                        <span class="item__line"></span>
+                                        <h3 class="item__title">Chatbots</h3>
+                                    </div>
+                                    <p class="item__text">
+                                        We so opinion friends me message as delight. Whole front do of plate
+                                        heard oh ought.
+                                    </p>
+                                </article>
+                                <article class="what__item item">
+                                    <div class="item__header">
+                                        <span class="item__line"></span>
+                                        <h3 class="item__title">Knowledgebase</h3>
+                                    </div>
+                                    <p class="item__text">
+                                        At jointure ladyship an insisted so humanity he. Friendly bachelor
+                                        entrance to on by. As put impossible own apartments b
+                                    </p>
+                                </article>
+                                <article class="what__item item">
+                                    <div class="item__header">
+                                        <span class="item__line"></span>
+                                        <h3 class="item__title">Education</h3>
+                                    </div>
+                                    <p class="item__text">
+                                        At jointure ladyship an insisted so humanity he. Friendly bachelor
+                                        entrance to on by. As put impossible own apartments b
+                                    </p>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="page__future future">
+                    <div class="future__container">
+                        <div class="future__feature feature">
+                            <h2 class="feature__title title">
+                                The Future is Now and You Just Need To Realize It. Step into Future Today &
+                                Make it Happen.
+                            </h2>
+                            <a href="#" class="feature__link">Request Early Access to Get Started</a>
+                        </div>
+                        <div data-spollers="479.98" class="future__items">
+                            <article class="future__item item item_future">
+                                <div data-spoller class="item__header">
+                                    <span class="item__line"></span>
+                                    <h3 class="item__title">Improving end distrusts instantly</h3>
+                                </div>
+                                <p class="item__text">
+                                    From they fine john he give of rich he. They age and draw mrs like.
+                                    Improving end distrusts may instantly was household applauded.
+                                </p>
+                            </article>
+                            <article class="future__item item item_future">
+                                <div data-spoller class="item__header">
+                                    <span class="item__line"></span>
+                                    <h3 class="item__title">Become the tended active</h3>
+                                </div>
+                                <p class="item__text">
+                                    Considered sympathize ten uncommonly occasional assistance sufficient not.
+                                    Letter of on become he tended active enable to.
+                                </p>
+                            </article>
+                            <article class="future__item item item_future">
+                                <div data-spoller class="item__header">
+                                    <span class="item__line"></span>
+                                    <h3 class="item__title">Message or am nothing</h3>
+                                </div>
+                                <p class="item__text">
+                                    Led ask possible mistress relation elegance eat likewise debating. By
+                                    message or am nothing amongst chiefly address.
+                                </p>
+                            </article>
+                            <article class="future__item item item_future">
+                                <div data-spoller class="item__header">
+                                    <span class="item__line"></span>
+                                    <h3 class="item__title">Really boy law county</h3>
+                                </div>
+                                <p class="item__text">
+                                    Really boy law county she unable her sister. Feet you off its like like
+                                    six. Among sex are leave law built now. In built table in an rapid blush.
+                                </p>
+                            </article>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="page__possibilities posibilities">
+                    <div class="posibilities__container">
+                        <div class="posibilities__wrapper">
+                            <div class="posibilities__image">
+                                <img src="@img/feature.png" alt="Human in VR" />
+                            </div>
+                            <div class="posibilities__content">
+                                <a href="#" class="posibilities__link posibilities__link_blue"
+                                    >Request Early Access to Get Started</a
+                                >
+                                <h2 class="posibilities__title title">
+                                    The possibilities are beyond your imagination
+                                </h2>
+                                <p class="posibilities__text">
+                                    Yet bed any for travelling assistance indulgence unpleasing. Not thoughts
+                                    all exercise blessing. Indulgence way everything joy alteration boisterous
+                                    the attachment. Party we years to order allow asked of.
+                                </p>
+                                <a href="#" class="posibilities__link">Request Early Access to Get Started</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="page__register register">
+                    <div class="register__container">
+                        <div class="register__wrapper">
+                            <div class="register__header">
+                                <p class="register__label">Request Early Access to Get Started</p>
+                                <h2 class="register__title">
+                                    Register today & start exploring the endless possiblities.
+                                </h2>
+                            </div>
+                            <a href="#" class="register__button">Get Started</a>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="page__blog blog">
+                    <div class="blog__container">
+                        <h2 class="blog__title">A lot is happening, We are blogging about it.</h2>
+                        <div class="blog__body">
+                            <article class="blog__item item-blog item-blog_1">
+                                <a href="#" class="item-blog__image-ibg">
+                                    <img src="@img/blog/1.jpg" alt="AI" />
+                                </a>
+                                <div class="item-blog__body">
+                                    <div class="item-blog__date">Sep 26, 2021</div>
+                                    <h4>
+                                        <a href="#" class="item-blog__link">
+                                            GPT-3 and Open AI is the future. Let us exlore how it is?
+                                        </a>
+                                    </h4>
+                                    <span><a href="#" class="item-blog__button">Read Full Article</a></span>
+                                </div>
+                            </article>
+                            <article class="blog__item item-blog item-blog_2">
+                                <a href="#" class="item-blog__image-ibg">
+                                    <img src="@img/blog/2.jpg" alt="AI" />
+                                </a>
+                                <div class="item-blog__body">
+                                    <div class="item-blog__date">Sep 26, 2021</div>
+                                    <h4>
+                                        <a href="#" class="item-blog__link">
+                                            GPT-3 and Open AI is the future. Let us exlore how it is?
+                                        </a>
+                                    </h4>
+                                    <span><a href="#" class="item-blog__button">Read Full Article</a></span>
+                                </div>
+                            </article>
+                            <article class="blog__item item-blog item-blog_3">
+                                <a href="#" class="item-blog__image-ibg">
+                                    <img src="@img/blog/3.jpg" alt="AI" />
+                                </a>
+                                <div class="item-blog__body">
+                                    <div class="item-blog__date">Sep 26, 2021</div>
+                                    <h4>
+                                        <a href="#" class="item-blog__link">
+                                            GPT-3 and Open AI is the future. Let us exlore how it is?
+                                        </a>
+                                    </h4>
+                                    <span><a href="#" class="item-blog__button">Read Full Article</a></span>
+                                </div>
+                            </article>
+                            <article class="blog__item item-blog item-blog_4">
+                                <a href="#" class="item-blog__image-ibg">
+                                    <img src="@img/blog/4.jpg" alt="AI" />
+                                </a>
+                                <div class="item-blog__body">
+                                    <div class="item-blog__date">Sep 26, 2021</div>
+                                    <h4>
+                                        <a href="#" class="item-blog__link">
+                                            GPT-3 and Open AI is the future. Let us exlore how it is?
+                                        </a>
+                                    </h4>
+                                    <span><a href="#" class="item-blog__button">Read Full Article</a></span>
+                                </div>
+                            </article>
+                            <article class="blog__item item-blog item-blog_5">
+                                <a href="#" class="item-blog__image-ibg">
+                                    <img src="@img/blog/5.jpg" alt="AI" />
+                                </a>
+                                <div class="item-blog__body">
+                                    <div class="item-blog__date">Sep 26, 2021</div>
+                                    <h4>
+                                        <a href="#" class="item-blog__link">
+                                            GPT-3 and Open AI is the future. Let us exlore how it is?
+                                        </a>
+                                    </h4>
+                                    <span><a href="#" class="item-blog__button">Read Full Article</a></span>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="page__request request">
+                    <div class="request__container">
+                        <h2 class="request__title">Do you want to step in to the future before others</h2>
+                        <a href="#" class="request__button">Request Early Access</a>
+                    </div>
+                </section>
+            </main>
+            @@include('html/_footer.htm',{})
+        </div>
+        @@include('html/_js.htm',{})
+    </body>
 </html>

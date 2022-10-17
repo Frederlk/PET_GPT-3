@@ -57,6 +57,7 @@ $responsiveType: 1;
 @import "base/null";
 
 body {
+    @include scrollbars(rem(12), $primary-1, $secondary-2);
     background-color: $dark-1;
     font-weight: 500;
     // Скролл заблокирован
